@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex05</title>
+<head>
+  <!-- bootstrap CDN link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>회원 정보 입력</h1>
+		<form method="post" action="/lesson01/ex05">
+			<!-- form의 name 속성(attribute)이 parameter로 넘어간다 -->
+			<div class="form-group">
+				<label for="userId">아이디</label>
+				<input type="text" class="form-control col-2" id="userId" name="userId" placeholder="아이디를 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="name">이름</label>
+				<input type="text" class="form-control col-2" id="name" name="name" placeholder="이름을 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="birth">생년월일</label>
+				<input type="text" class="form-control col-3" id="birth" name="birth" placeholder="예) 19950101">
+			</div>
+			<div class="form-group">
+				<label for="email">이메일 주소</label>
+				<input type="text" class="form-control col-3" id="email" name="email" placeholder="email 주소를 입력하세요">
+			</div>
+			<button type="submit" class="btn btn-info">가입하기</button>
+		</form>
+	</div>
+</body>
+</html>
