@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>체격 조건</title>
+<title>계산기</title>
 	<!-- bootstrap CDN link -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -14,17 +14,19 @@
 </head>
 <body>
 	<div class="container">
-		<h1>체격 조건 입력</h1>
-		<form method="get" action="/lesson02/quiz03_1.jsp">
+		<h1>사칙 연산 계산기</h1>
+		<form method="post" action="/lesson02/quiz04_1.jsp">
 			<div class="d-flex">
-			<div class="d-flex align-items-end mr-3">
-				<input type="text" name="height" placeholder="키를 입력하세요." class="form-control"><span>&nbsp;cm</span>
+				<input type="text" name="num1" class="form-control mr-2">
+				<select name="calculate" class="form-control mr-2">
+					<option>+</option>
+					<option>-</option>
+					<option>*</option>
+					<option>/</option>
+				</select>
+				<input type="text" name="num2" class="form-control mr-2">
+				<input type="submit" value="계산하기" class="btn btn-success">
 			</div>
-			<div class="d-flex align-items-end mr-3">
-				<input type="text" name="weight" placeholder="뭄무게를 입력하세요." class="form-control"><span>&nbsp;kg</span>
-			</div>
-			<input type="submit" value="계산" class="btn btn-info">
-		</div>		
 		</form>
 	</div>
 </body>
