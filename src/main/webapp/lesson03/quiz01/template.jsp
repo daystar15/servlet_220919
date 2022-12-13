@@ -13,7 +13,7 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<style>
-		a {
+		a, a:hover {
 			color: #fff; 
 			text-decoration: none;
 		}
@@ -60,29 +60,7 @@ map = new HashMap<String, String>() {{ put("ch", "121"); put("name", "KBSN 스�
 list.add(map);
 %>
 	<div class="container text-center">
-		<header>
-			<h1 class="text-danger font-weight-bold">Sk Broadband IPTV</h1>
-			<ul class="nav bg-danger">
-				<li class="nav-item">
-					<a href="/lesson03/quiz01/template.jsp" class="nav-link">전체</a>
-				</li>
-				<%
-					for (Map<String, String> item : list) {
-						List<String> list1 = new ArrayList<>(Arrays.asList(item.get("category")));
-						Set<String> set = new HashSet<>(list1);
-						Iterator<String> iter = set.iterator();
-						while (iter.hasNext()) {
-							String category = iter.next();
-				%>
-				<li class="nav-item">
-					<a href="/lesson03/quiz01/template.jsp?category=<%= item.get("category") %>" class="nav-link"><%= category %></a>
-				</li>
-				<%
-						}
-					}
-				%>
-			</ul>
-		</header>
+		<jsp:include page="header.jsp" />
 		<div class="container">
 			<div>
 				<table class="table">
